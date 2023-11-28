@@ -66,7 +66,7 @@ if (isset($_GET["name"])&& ($_GET["email"]) && ($_GET["age"])){
             </div>
             <div class="col-auto">
                 <label>Email</label>
-                <input type="email" class="form-control" name = "email">
+                <input type="text" class="form-control" name = "email">
             </div>
             <div class="col-auto">
                 <label>Age</label>
@@ -86,8 +86,20 @@ if (isset($_GET["name"])&& ($_GET["email"]) && ($_GET["age"])){
                     <p class="card-text"><?php echo $age ?></p>
                 </div>
             </div>
+            <?php 
+                if (strlen($name)> 3 && strpos($email, "." && strpos($email, "@") !== false) && is_numeric($age)){
+            ?>
+                <div class="alert alert-success w-25" role="alert">
+                    Accesso Riuscito
+                </div>
+            <?php } else{ ?>
+                <div class="alert alert-danger w-25" role="alert">
+                    Accesso Negato
+                </div>
+            <?php } ?>
         <?php } ?>
         </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
