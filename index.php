@@ -52,13 +52,32 @@ $games = [
             </h5>
         </div>
     </div>
-
-
-
     <?php }?>;
-
-
-
+    <h1 class = "mt-4 p-4">Name, email and age</h1>
+        <form class="row px-4 gy-2 gx-3 align-items-center" action="index.php" method="GET">
+            <div class="col-auto">
+                <label>Name</label>
+                <input type="text" class="form-control" name = "name">
+            </div>
+            <div class="col-auto">
+                <label>Email</label>
+                <input type="email" class="form-control" name = "email">
+            </div>
+            <div class="col-auto">
+                <label>Age</label>
+                <input type="number" class="form-control" name = "age">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+        
+        <div class= "p-4">
+            <?php 
+                $name = $_GET["name"];
+            
+            ?>
+        </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
