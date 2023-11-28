@@ -39,7 +39,24 @@ $games = [
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 class="p-4">NBA Games</h1>
+    <?php foreach ($games as $game){
+    ?>
+    <div class="card m-2 w-50 text-center">
+        <div class="card-header">
+            <?php echo $game["homeTeam"] . " - " . $game["awayTeam"]; ?>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">
+                <?php echo $game["homePoints"] . " - " . $game["awayPoints"]; ?>
+            </h5>
+        </div>
+    </div>
+
+
+
+    <?php }?>;
+
 
 
 
