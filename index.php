@@ -31,6 +31,11 @@ if (isset($_GET["name"])&& ($_GET["email"]) && ($_GET["age"])){
     $email = $_GET["email"];
     $age = $_GET["age"];
 }
+
+$gameOfThrones = "La serie racconta le avventure di molti personaggi ed è ambientata in un grande mondo immaginario costituito principalmente dal continente Occidentale (Westeros) e da quello Orientale (Essos). Il centro più grande e civilizzato di Westeros è la città capitale Approdo del Re, dove si trova il Trono di Spade dei Sette Regni. La lotta per la conquista del trono porta le più potenti e nobili famiglie del continente a scontrarsi o allearsi tra loro in un contorto gioco di potere, che coinvolge anche l'ultima discendente della dinastia regnante deposta. Gli intrighi politici, economici e religiosi dei nobili lasciano la popolazione nella povertà e nel degrado, mentre il mondo viene minacciato dall'arrivo di un inverno diverso dai precedenti, che risveglia creature leggendarie dimenticate e fa emergere forze oscure e magiche.";
+
+$paragraphsGot = explode(".", $gameOfThrones);
+// var_dump($paragraphsGot);
 ?>
 
 
@@ -100,7 +105,10 @@ if (isset($_GET["name"])&& ($_GET["email"]) && ($_GET["age"])){
         <?php } ?>
         </div>
 
-
+    <h1 class = "mt-4 p-4">Game Of Thrones</h1>
+    <?php foreach ($paragraphsGot as $paragraph){;
+        echo "<p class = 'px-4'>$paragraph . "." </p>";
+        } ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
