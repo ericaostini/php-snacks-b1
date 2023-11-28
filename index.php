@@ -3,26 +3,26 @@ $games = [
     $gameOne = [
         "homeTeam"=> "Chicago Bulls",
         "awayTeam"=> "Denver Nuggets",
-        "homePoints"=> "95",
-        "awayPoints"=> "104",
+        "homePoints"=> 95,
+        "awayPoints"=> 104,
     ],
     $gameTwo = [
         "homeTeam"=> "Golden State Warriors",
         "awayTeam"=> "Boston Celtics",
-        "homePoints"=> "114",
-        "awayPoints"=> "113",
+        "homePoints"=> 114,
+        "awayPoints"=> 113,
     ],
     $gameThree = [
         "homeTeam"=> "Los Angeles Lakers",
         "awayTeam"=> "Phoenix Suns",
-        "homePoints"=> "88",
-        "awayPoints"=> "98",
+        "homePoints"=> 88,
+        "awayPoints"=> 98,
     ],
     $gameFour = [
         "homeTeam"=> "Miami Heat",
         "awayTeam"=> "Toronto Raptors",
-        "homePoints"=> "101",
-        "awayPoints"=> "96",
+        "homePoints"=> 101,
+        "awayPoints"=> 96,
     ]
 ];
 
@@ -49,21 +49,21 @@ $paragraphsGot = explode(".", $gameOfThrones);
     <title>Document</title>
 </head>
 <body>
-    <h1 class="p-4">NBA Games</h1>
+    <h1 class="p-4">Snack1: NBA Games</h1>
     <?php foreach ($games as $game){
     ?>
     <div class="card m-2 w-50 text-center">
         <div class="card-header">
             <?php echo $game["homeTeam"] . " - " . $game["awayTeam"]; ?>
         </div>
-        <div class="card-body">
+        <div class="card-body" :class = "<?php ($game["homePoints"] > $game["awayPoints"]) ? 'bg-success' : 'bg-danger';?>" >
             <h5 class="card-title">
                 <?php echo $game["homePoints"] . " - " . $game["awayPoints"]; ?>
             </h5>
         </div>
     </div>
     <?php }?>;
-    <h1 class = "mt-4 p-4">Name, email and age</h1>
+    <h1 class = "mt-4 p-4">Snack2: Name, email and age</h1>
         <form class="row px-4 gy-2 gx-3 align-items-center" action="index.php" method="GET">
             <div class="col-auto">
                 <label>Name</label>
@@ -105,7 +105,7 @@ $paragraphsGot = explode(".", $gameOfThrones);
         <?php } ?>
         </div>
 
-    <h1 class = "mt-4 p-4">Game Of Thrones</h1>
+    <h1 class = "mt-4 p-4">Bonus: Game Of Thrones</h1>
     <?php foreach ($paragraphsGot as $paragraph){;
         echo "<p class = 'px-4'>$paragraph . "." </p>";
         } ?>
