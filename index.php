@@ -1,5 +1,30 @@
 <?php 
-
+$games = [
+    $gameOne = [
+        "homeTeam"=> "Chicago Bulls",
+        "awayTeam"=> "Denver Nuggets",
+        "homePoints"=> "95",
+        "awayPoints"=> "104",
+    ],
+    $gameTwo = [
+        "homeTeam"=> "Golden State Warriors",
+        "awayTeam"=> "Boston Celtics",
+        "homePoints"=> "114",
+        "awayPoints"=> "113",
+    ],
+    $gameThree = [
+        "homeTeam"=> "Los Angeles Lakers",
+        "awayTeam"=> "Phoenix Suns",
+        "homePoints"=> "88",
+        "awayPoints"=> "98",
+    ],
+    $gameFour = [
+        "homeTeam"=> "Miami Heat",
+        "awayTeam"=> "Toronto Raptors",
+        "homePoints"=> "101",
+        "awayPoints"=> "96",
+    ]
+];
 
 ?>
 
